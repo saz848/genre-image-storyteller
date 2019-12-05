@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Genre-Based Neural Storyteller</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html">Genre-Based Image Storyteller</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Introduction</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="design.html">Design
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="results.html">Results</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="discussion.html">Discussion</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="mt-5">Design</h1>
+        <h4 class="mt-5">Prior Work</h4>
+            <p class="lead">We’re building on the work by <a href="https://github.com/ryankiros/neural-storyteller">Kiros et al.</a> who have created a <b>neural storyteller</b> trained on romance novels. The neural storyteller is essentially a recurrent neural network decoder for the input text and then parallel to this trains on COCO image/caption embeddings.</p>
+        <h4 class="mt-5">Modifications</h4>
+            <p class="lead">We modified two elements of the existing model from Kiros et al. First, we tried several different versions of the model’s tuning parameters. Second, we trained the model on two different genre corpora.</p>
+            <p>
+                <ul>
+                    <li>Tuning Parameters: the existing neural storyteller allows for the tuning of the number of captions to condition on and beam search width.</li>
+                    <li>Genre corpora: We created two corpora of public domain books, one each for science fiction novels and biographies. We trained the model on each corpus in turn. Then, for each model, we generated stories using images characteristic of scenes from romance, science fiction, and biographies.</li>
+                </ul>
+            </p>
+        <h4 class="mt-5">Text Processing</h4>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="../vendor/jquery/jquery.slim.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
