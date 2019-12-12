@@ -93,7 +93,13 @@
             </div>
 
         </div>
-
+        <p class="lead">
+          Varying the number of captions used in story generation and the beam width do not seem to change the quality of the ouput - all are very similar in topic and relevance to the image, at least for "romantic" images using the romance-trained storyteller.
+        </p>
+        <p class="lead">
+          The one difference of note is that training on many more captions incorporates less-relevant captions and therefore generates slightly less relevant stories. When k=200, the story includes a mention of a fisherman, not present in the image, that does not show up when trained on fewer captions.
+        </p>  
+      
         <h4 class="mt-5">Genre-Based Input Text Results</h4>
         
       </div>
