@@ -12,6 +12,8 @@
 
   <!-- Bootstrap core CSS -->
   <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+
 
 </head>
 
@@ -50,7 +52,50 @@
     <div class="row">
       <div class="col-lg-12">
         <h1 class="mt-5">Results</h1>
-        <p class="lead">Complete with pre-defined file paths and responsive navigation!</p>
+        <h4 class="mt-5">Adjusting Knobs</h4>
+        <p class="lead">
+          We first adjusted the parameters of the model to see how these parameters affect the stories generated for romance novels. The parameters are the following: 
+          <ul class="half-width">
+            <li>k = # of captions to use to generate story: Does increasing or decreasing the number of captions used as input change the quality of the output story?
+            </li>
+            <li>
+                b = Beam search width: breadth of the search for the decoder RNN
+            </li>
+          </ul>
+        </p>
+        <p class="lead">We chose to use the following sample image:</p>
+        <div class="d-flex justify-content-center">
+          <img class="sample-image" src="../img/sample-image.png">
+        </div>
+
+        <div class="d-flex justify-content-between">
+            <div>
+                <h5 class="mt-5">k = 100; b = 50 (default)</h5>
+                <p>
+                    <mark>We were barely able to catch the breeze at the beach </mark>, and it felt as if someone stepped out of my mind . She was in love with him for the first time in months , so she had no intention of escaping . The sun had risen from the ocean , making her feel more alive than normal . She 's beautiful , but the truth is that I do n't know what to do . The sun was just starting to fade away , leaving people scattered around the Atlantic Ocean . I d seen the men in his life , who guided me at the beach once more .
+                </p>
+            </div>
+
+    
+            <div>
+                <h5 class="mt-5">k = 200; b = 100</h5>
+                <p>
+                    <mark>We were barely able to breathe the breeze at the beach </mark>, and for the first time in months . The man who had just stepped out of my line of sight , as he watched her walk away from him . The sun was coming down on my face , making her feel more alive than it had ever been before . I do n't know what it would be like to go fishing , but that s the most important thing in the world . The sun was starting to fade , and the ocean waters gave chase . I m certain people who happened on their beach had no desire at the moment .
+                </p>
+            </div>
+
+    
+            <div>
+                <h5 class="mt-5">k = 20; b = 50</h5>
+                <p>
+                    <mark>He had the ability to catch my breath at the beach </mark>, and after another day , I let out a soft sigh as the sun rose up off the horizon . I do n't know why it was so beautiful . The man who had fallen in love with her was gone , and he seemed to be the only person in the world . There was no reason for it , but it felt like a lot of people watching over her as they rode back to San Diego . The sun rose , bathing her body in waves . I had no intention of seeing him at the beach , especially when the sun came into life .
+                </p>
+            </div>
+
+        </div>
+
+        <h4 class="mt-5">Genre-Based Input Text Results</h4>
+        
       </div>
     </div>
   </div>

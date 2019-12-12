@@ -12,6 +12,7 @@
 
   <!-- Bootstrap core CSS -->
   <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
 
 </head>
 
@@ -52,15 +53,44 @@
         <h1 class="mt-5">Design</h1>
         <h4 class="mt-5">Prior Work</h4>
             <p class="lead">We’re building on the work by <a href="https://github.com/ryankiros/neural-storyteller">Kiros et al.</a> who have created a <b>neural storyteller</b> trained on romance novels. The neural storyteller is essentially a recurrent neural network decoder for the input text and then parallel to this trains on COCO image/caption embeddings.</p>
-        <h4 class="mt-5">Modifications</h4>
+            <div class="d-flex justify-content-center">
+                <img class="text-center" src="../img/existing-work.png">
+            </div>
+            <h4 class="mt-5">Modifications</h4>
             <p class="lead">We modified two elements of the existing model from Kiros et al. First, we tried several different versions of the model’s tuning parameters. Second, we trained the model on two different genre corpora.</p>
             <p>
-                <ul>
+                <ul class="half-list">
                     <li>Tuning Parameters: the existing neural storyteller allows for the tuning of the number of captions to condition on and beam search width.</li>
                     <li>Genre corpora: We created two corpora of public domain books, one each for science fiction novels and biographies. We trained the model on each corpus in turn. Then, for each model, we generated stories using images characteristic of scenes from romance, science fiction, and biographies.</li>
                 </ul>
             </p>
         <h4 class="mt-5">Text Processing</h4>
+        <p class="lead">
+          The input text that we used to train our own sentence encoder-decoder was scraped from <a href="https://www.gutenberg.org/">Project Gutenberg</a>. We selected books that fit the following genres: 
+          <ul>
+            <li>Biography</li>
+            <li>Science Fiction</li>
+          </ul>
+        </p>
+        <p class="lead">
+            Which resulted in 3 sets of 6 sentences per book. 
+        </p>
+
+        <h4 class="mt-5">Sample Text</h4>
+          <h5 class="mt-5">Biography</h5>
+            <p class="half-list lead">
+            There was a salt-marsh that bounded part of the mill-pond, on the edge of which, at high water, we used to stand to fish for minnows. By much trampling, we had made it a mere quagmire. My proposal was to build a wharff there fit for us to stand upon…(Benjamin Franklin's autobiography)
+            </p>
+
+          <h5 class="mt-5">Science Fiction</h5>
+            <p class="half-list lead">
+                "What's the matter, Gray? Trying to start something?"
+
+                "Suppose I were?" asked Gray silkily. Dio was the unofficial leader of
+                the convict-veterans. There was about his thin body and hatchet face
+                some of the grim determination that had made the Martians cling to their
+                dying world and bring life to it again. (Leigh Brackett, “A World is Born”)                
+            </p>
       </div>
     </div>
   </div>

@@ -12,6 +12,8 @@
 
   <!-- Bootstrap core CSS -->
   <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+
 
 </head>
 
@@ -50,7 +52,23 @@
     <div class="row">
       <div class="col-lg-12">
         <h1 class="mt-5">Discussion</h1>
-        <p class="lead">Complete with pre-defined file paths and responsive navigation!</p>
+        <h4 class="mt-5">Limitations</h4>
+          <p class="lead">
+            One thing we found was that there were some issues with the caption generation step in this process. The punctuation is all over the place, which can be addressed by cleaning up the text. However, if you look at the example below, you'll notice that for genres such as science fiction, the caption generator has a hard time recognizing non-human entities. This makes for stories that do not necessarily match the images and genres as intented. 
+          </p>
+          <div class="d-flex justify-content-center">
+              <img class="text-center" src="../img/scifi-caption.png">
+          </div>
+        <h4 class="mt-5">Future Work</h4>
+          <p class="lead">
+            In the future, we would like to develop an evaluation metric to see how closely the image matches the generated story. When modifying the parameters, it is difficult to see what the difference in output really is, and it's hard to tell how different each story is to the corresponding image. 
+            <br>
+            <br>
+            We also want to work on an evaluation metric for determining how creative a story is based on the image. For applications such as generating fun captions for Instagram, we want to make sure this generator is able to output something more than just a technical description of the image. 
+            <br>
+            <br>
+            Another area of future work is related to the limitation of the caption generator. We noticed that it was difficult to generate captions that actually fit well with science fiction images, so we would like to try to perhaps find another caption generator that would perform better in these cases. 
+          </p>
       </div>
     </div>
   </div>
